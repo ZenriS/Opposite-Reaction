@@ -1,0 +1,267 @@
+// GENERATED AUTOMATICALLY FROM 'Assets/InputAction/PlayerControls.inputactions'
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
+
+public class PlayerControls : IInputActionCollection
+{
+    private InputActionAsset asset;
+    public PlayerControls()
+    {
+        asset = InputActionAsset.FromJson(@"{
+    ""name"": ""PlayerControls"",
+    ""maps"": [
+        {
+            ""name"": ""Meny"",
+            ""id"": ""bb2c5fb6-896b-498d-be12-896062180e16"",
+            ""actions"": [
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""e89efb31-c06e-4e3c-afee-91334f8d8ca9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e9ea6a73-0779-45d4-b290-16fe5c4d9bde"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8ed64c9-f6fa-48c0-b098-c6cfe0900f21"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player"",
+            ""id"": ""0f72ff3d-5e05-430c-82b2-994aeb47af99"",
+            ""actions"": [
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5534294-2c6f-4389-b07d-f4ccbce20d04"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""809a42e3-3266-4cc5-a00f-c244beb59359"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ChangeWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e7087fb-ebc9-4092-a550-0db558324ca3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a2954121-5227-4fdd-88ec-a0f79d5c4caa"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8cd4d492-7eaf-4cfc-88da-1b5d83be4c8f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8a07d16f-6780-47fb-b5d4-1e9c26bea132"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        }
+    ],
+    ""controlSchemes"": []
+}");
+        // Meny
+        m_Meny = asset.GetActionMap("Meny");
+        m_Meny_TogglePause = m_Meny.GetAction("TogglePause");
+        // Player
+        m_Player = asset.GetActionMap("Player");
+        m_Player_Aim = m_Player.GetAction("Aim");
+        m_Player_Shoot = m_Player.GetAction("Shoot");
+        m_Player_ChangeWeapon = m_Player.GetAction("ChangeWeapon");
+    }
+
+    ~PlayerControls()
+    {
+        UnityEngine.Object.Destroy(asset);
+    }
+
+    public InputBinding? bindingMask
+    {
+        get => asset.bindingMask;
+        set => asset.bindingMask = value;
+    }
+
+    public ReadOnlyArray<InputDevice>? devices
+    {
+        get => asset.devices;
+        set => asset.devices = value;
+    }
+
+    public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
+
+    public bool Contains(InputAction action)
+    {
+        return asset.Contains(action);
+    }
+
+    public IEnumerator<InputAction> GetEnumerator()
+    {
+        return asset.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+
+    public void Enable()
+    {
+        asset.Enable();
+    }
+
+    public void Disable()
+    {
+        asset.Disable();
+    }
+
+    // Meny
+    private readonly InputActionMap m_Meny;
+    private IMenyActions m_MenyActionsCallbackInterface;
+    private readonly InputAction m_Meny_TogglePause;
+    public struct MenyActions
+    {
+        private PlayerControls m_Wrapper;
+        public MenyActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TogglePause => m_Wrapper.m_Meny_TogglePause;
+        public InputActionMap Get() { return m_Wrapper.m_Meny; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenyActions set) { return set.Get(); }
+        public void SetCallbacks(IMenyActions instance)
+        {
+            if (m_Wrapper.m_MenyActionsCallbackInterface != null)
+            {
+                TogglePause.started -= m_Wrapper.m_MenyActionsCallbackInterface.OnTogglePause;
+                TogglePause.performed -= m_Wrapper.m_MenyActionsCallbackInterface.OnTogglePause;
+                TogglePause.canceled -= m_Wrapper.m_MenyActionsCallbackInterface.OnTogglePause;
+            }
+            m_Wrapper.m_MenyActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                TogglePause.started += instance.OnTogglePause;
+                TogglePause.performed += instance.OnTogglePause;
+                TogglePause.canceled += instance.OnTogglePause;
+            }
+        }
+    }
+    public MenyActions @Meny => new MenyActions(this);
+
+    // Player
+    private readonly InputActionMap m_Player;
+    private IPlayerActions m_PlayerActionsCallbackInterface;
+    private readonly InputAction m_Player_Aim;
+    private readonly InputAction m_Player_Shoot;
+    private readonly InputAction m_Player_ChangeWeapon;
+    public struct PlayerActions
+    {
+        private PlayerControls m_Wrapper;
+        public PlayerActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Aim => m_Wrapper.m_Player_Aim;
+        public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+        public InputAction @ChangeWeapon => m_Wrapper.m_Player_ChangeWeapon;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerActions instance)
+        {
+            if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
+            {
+                Aim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                Aim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                Aim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
+                Shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                Shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                Shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                ChangeWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
+                ChangeWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
+                ChangeWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
+            }
+            m_Wrapper.m_PlayerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                Aim.started += instance.OnAim;
+                Aim.performed += instance.OnAim;
+                Aim.canceled += instance.OnAim;
+                Shoot.started += instance.OnShoot;
+                Shoot.performed += instance.OnShoot;
+                Shoot.canceled += instance.OnShoot;
+                ChangeWeapon.started += instance.OnChangeWeapon;
+                ChangeWeapon.performed += instance.OnChangeWeapon;
+                ChangeWeapon.canceled += instance.OnChangeWeapon;
+            }
+        }
+    }
+    public PlayerActions @Player => new PlayerActions(this);
+    public interface IMenyActions
+    {
+        void OnTogglePause(InputAction.CallbackContext context);
+    }
+    public interface IPlayerActions
+    {
+        void OnAim(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnChangeWeapon(InputAction.CallbackContext context);
+    }
+}
